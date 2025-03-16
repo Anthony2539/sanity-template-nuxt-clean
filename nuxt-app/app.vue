@@ -1,6 +1,5 @@
 <template>
   <a
-    v-if="previewEnabled && !inFrame"
     :href="`/preview/disable?redirect=${route.fullPath}`"
     class="preview-toggle"
   >
@@ -41,7 +40,6 @@
 
 <script setup lang="ts">
 const route = useRoute()
-const { enabled: previewEnabled, inFrame } = useSanityVisualEditingState()
 </script>
 
 <style>
